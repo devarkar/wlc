@@ -1,16 +1,26 @@
+mixin nav-content()
+	ul
+		li: a(href="#home") Home
+		li: a(href="#events") Events
+		li: a(href="#headlines") Headlines
+		li: a(href="#fighters") Fighters
+		li: a(href="#about") About
+		li: a(href="#media") Media
+		li: a(href="#fantasy") Play Fantasy
+		li: a(href="#ticket") Get Your Tickets
+
+.mobile-nav.is-open
+	+nav-content()
+
+
 header
 	.header-position
 		h1.logo World Lethwei Championship
 
 		nav.site-nav
-			ul
-				li: a(href="#home") Home
-				li: a(href="#events") Events
-				li: a(href="#headlines") Headlines
-				li: a(href="#fighters") Fighters
-				li: a(href="#about") About
-				li: a(href="#media") Media
-				li: a(href="#fantasy") Play Fantasy
-				li: a(href="#ticket") Get Your Tickets
+			+nav-content()
+			
 
 		a(href="mailto:devarkarmg2015@gmail.com").email-link +Email WLC
+
+		.mobile-nav-toggle: span
